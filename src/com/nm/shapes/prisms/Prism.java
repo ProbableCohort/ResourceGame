@@ -13,5 +13,6 @@ public class Prism extends Shape {
 
   public Prism(ShapeType type, double length, double width, double height) {
     super(type, length, width, height);
+    super.volume = length * width * height;
   }
 }

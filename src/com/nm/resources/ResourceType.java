@@ -5,21 +5,22 @@ package com.nm.resources;
  */
 public enum ResourceType {
 
-    COAL (1, "Coal"),
-    WOOD (2, "Wood"),
-    SILVER (3, "Silver"),
-    GOLD (4, "Gold")
+  COAL (1, "Coal"),
+  WOOD (2, "Wood"),
+  SILVER (3, "Silver"),
+  GOLD (4, "Gold"),
+  OIL(5, "Oil")
     ;
 
-    private final String name;
-    private final int resourceId;
+  private final String name;
+  private final int resourceId;
 //    private final double defaultSize;
 //    private final double defaultWeight;
 
-    ResourceType(int resourceId, String name) {
-        this.name = name;
-        this.resourceId = resourceId;
-    }
+  ResourceType(int resourceId, String name) {
+      this.name = name;
+      this.resourceId = resourceId;
+  }
 
 //    ResourceType(int resourceId, String name, double defaultSize, double defaultWeight) {
 //        this.name = name;
@@ -28,11 +29,11 @@ public enum ResourceType {
 //        this.defaultWeight = defaultWeight;
 //    }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+      return name;
+  }
 
-    public int getId() {
+  public int getId() {
         return resourceId;
     }
 

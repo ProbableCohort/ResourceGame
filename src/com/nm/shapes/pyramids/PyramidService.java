@@ -18,7 +18,7 @@ public class PyramidService implements PyramidOperations {
     }
 
     @Override
-    public Pyramid getPyarmid(double volume, double side, double heightMultiplier) {
+    public Pyramid getPyramid(double volume, double side, double heightMultiplier) {
         double height = side * heightMultiplier;
         double base = Math.sqrt((volume * 3) / height);
         return new Pyramid(base, base, height);

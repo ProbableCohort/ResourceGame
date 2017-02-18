@@ -8,7 +8,7 @@ public enum ShapeType {
     PYRAMID (1, "Pyramid"),
     RECTANGLE (2, "Rectangle"),
     SQUARE(3, "Square"),
-    SPHERE(4, "Sphere")
+    SPHEROID(4, "Sphereoid")
     ;
 
     private final String name;

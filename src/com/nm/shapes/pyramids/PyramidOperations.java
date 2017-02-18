@@ -8,7 +8,7 @@ public interface PyramidOperations {
 
     Pyramid getPyramid(double volume, double height);
 
-    Pyramid getPyarmid(double volume, double side, double heightMultiplier);
+    Pyramid getPyramid(double volume, double side, double heightMultiplier);
 
     Pyramid getPyramid(double volume, float heightMultiplier);
 }

@@ -8,6 +8,7 @@ public abstract class Shape {
   protected double height;
   protected double length;
   protected double width;
+  protected double volume;
   private boolean is3D = false;
 
   public Shape() {
@@ -68,5 +69,9 @@ public abstract class Shape {
 
   public void setWidth(double width) {
     this.width = width;
+  }
+
+  public double getVolume() {
+    return volume;
   }
 }
