@@ -1,5 +1,7 @@
 package com.nm;
 
+import com.nm.lang.AnsiColor;
+import com.nm.lang.PrintUtil;
 import com.nm.objects.FluidTank;
 import com.nm.objects.Pile;
 import com.nm.resources.Coal;
@@ -12,6 +14,13 @@ import com.nm.resources.Wood;
 public class Main {
 
   public static void main(String[] args) {
+    PrintUtil.wrapLine("Main.main() is running!", AnsiColor.RED);
+    testObjects();
+    PrintUtil.wrapLine("Main.main() has stopped running!", AnsiColor.RED);
+  }
+
+  private static void testObjects() {
+    PrintUtil.wrapLine("Running testObjects", "#", AnsiColor.BLUE);
     Coal coal = new Coal();
     Pile<Coal> coalPile = new Pile<>(coal);
     coalPile.setResourceSize(0.1d);
@@ -33,6 +42,6 @@ public class Main {
     System.out.println(String.format("The Oil Tank has %f gallons of oil", oilTank.getAmount()));
     oilTank.add(oil, 100);
     System.out.println(String.format("The Oil Tank has %f gallons of oil", oilTank.getAmount()));
-
+    PrintUtil.wrapLine("Finishing running testObjects", '/');
   }
 }
