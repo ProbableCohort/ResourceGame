@@ -8,6 +8,8 @@ import com.nm.shapes.ShapeType;
  */
 public class Spheroid extends Shape {
 
+  private SpheroidOperations spheroidService = new SpheroidService();
+
   protected double diameter;
   protected double radius;
 
@@ -19,5 +21,21 @@ public class Spheroid extends Shape {
     this.name = ShapeType.SPHEROID.getName();
     this.diameter = diameter;
     this.radius = diameter / 2;
+  }
+
+  public double getDiameter() {
+    return diameter;
+  }
+
+  public void setDiameter(double diameter) {
+    this.diameter = diameter;
+  }
+
+  public double getRadius() {
+    return radius;
+  }
+
+  public void setRadius(double radius) {
+    this.radius = radius;
   }
 }

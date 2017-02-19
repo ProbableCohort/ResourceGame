@@ -16,6 +16,7 @@ public final class PrintUtil {
   private static final int DEFAULT_BUFFER_SIZE = 3;
   private static final char DEFAULT_SYMBOL = '*';
   private static final AnsiColor DEFAULT_COLOR = AnsiColor.CYAN;
+  private static final int DEFAULT_LINE_LENGTH = 30;
 
   private PrintUtil() {
   }
@@ -86,6 +87,43 @@ public final class PrintUtil {
   }
 
   /**
+   * Prints a divider line
+   *
+   */
+  public static void printDivider() {
+    printDivider(DEFAULT_COLOR);
+  }
+
+  /**
+   * Prints a divider line of the given color
+   *
+   * @param color
+   */
+  public static void printDivider(AnsiColor color) {
+    System.out.println(ColorUtil.colorText(color, createDividerLine()));
+  }
+
+  /**
+   * Prints the given number of divider lines
+   *
+   * @param lines
+   */
+  public static void printDividers(int lines) {
+    printDividers(DEFAULT_COLOR, lines);
+  }
+
+  /**
+   * Prints the given number of divider lines in the given color
+   * @param color
+   * @param lines
+   */
+  public static void printDividers(AnsiColor color, int lines) {
+    for (int i = 0; i < lines; i++) {
+      printDivider(color);
+    }
+  }
+
+  /**
    * Buffers the line with the given symbol, for the buffer size
    * e.g. for "Some Text" with a buffer size of five and the symbol '#':
    * ##### Some Text #####
@@ -119,6 +157,15 @@ public final class PrintUtil {
       divider.append(symbol);
     }
     return divider.toString();
+  }
+
+  /**
+   * Creates a default divider line
+   *
+   * @return
+   */
+  private static String createDividerLine() {
+    return createDividerLine(DEFAULT_SYMBOL, DEFAULT_LINE_LENGTH) + AnsiColor.RESET.getColorCode();
   }
 
   /**

@@ -5,12 +5,15 @@ package com.nm.shapes.spheroids;
  */
 public class Sphere extends Spheroid {
 
+  private SpheroidOperations spheroidService = new SpheroidService();
+
   public Sphere() {
     super();
   }
 
   public Sphere(double diameter) {
     super(diameter);
+    this.volume = spheroidService.getVolume(this);
   }
 
 }
